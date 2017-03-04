@@ -25,7 +25,38 @@ We intend to develop a web application which will provide information regarding 
    - `wetter\WebContent\resources\includes\geo_loc.jsp`; line 27 28
    - `wetter\WebContent\resources\includes\geo_lookup.jsp`; line 27 28
 
-4. Run the project on server.
+4. Run the project on Apache Tomcat server.
+
+## Screens
+
+### Home page
+![index.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/index.png)  
+  
+
+### Home page, showing available map layers in dropdown
+![assets/index_autocomplete.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/index_autocomplete.png)  
+  
+
+### Map page, showing various weather layer overlays (temprature, cloud, wind)
+![assets/map.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/map.png)  
+  
+
+### Home page, showing places smart autocomplete feature for search
+![assets/index_autocomplete_merge.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/index_autocomplete_merge.png)  
+  
+
+### Stats Page _(for representation only)_
+![assets/Wetter___stats.jsp.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/Wetter___stats.jsp.png)  
+  
+
+### Geo Location page, shows detailed Weather Forecast based on user's geolocation (needs supported browser) with automatic Units (Celsius/Fahrenheit etc)
+![assets/Wetter___geo_loc.jsp.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/Wetter___geo_loc.jsp.png)  
+  
+
+### Lookup page, shows detailed Weather Forecast for search term with automatic Units (Celsius/Fahrenheit etc)
+![assets/Wetter___geo_lookup_miami.jsp.png ](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/Wetter___geo_lookup_miami.jsp.png)  
+![assets/Wetter___geo_lookup_mumbai.jsp.png ](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/Wetter___geo_lookup_mumbai.jsp.png)  
+![assets/Wetter___geo_lookup_bombay.jsp.png ](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/Wetter___geo_lookup_bombay.jsp.png)  
 
 
 ## Third party resources used
