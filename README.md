@@ -29,7 +29,7 @@ We intend to develop a web application which will provide information regarding 
 
 
 ## Third party resources used
-###APIs
+### APIs 
 1. [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/)
 2. [Weather API- OpenWeatherMap](https://openweathermap.org/api)
 3. [Dark Sky API](https://darksky.net/dev/)
