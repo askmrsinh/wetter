@@ -1,0 +1,158 @@
+h1 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+	line-height: 46px;
+	font-size: 46px;
+	margin: 0 0 23px 0;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	margin: 0 0 23px 0;
+}
+
+.brand {
+	font-family: 'Bitter', serif;
+	font-weight: 700;
+	color: black;
+	text-align: center;
+/* 	text-shadow: 3px 6px 9px; */
+}
+
+/* nav */
+.navbar-brand.brand {
+	font-size: 28px !important;
+}
+
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.navbar-nav>li>a {
+	/*text-shadow: 1px 2px 4px; */
+	
+}
+
+.navbar-collapse .navbar-nav.navbar-right:last-child>.dropdown:last-child>a
+	{
+	border-radius: 0;
+}
+
+.dropdown-header {
+	padding-left: 6px !important;
+	font-size: 10px;
+	color: #bfbfbf;
+}
+
+/* footer */
+.foot {
+	font-size: 14px;
+	padding: 40px 0;
+	background-color: #34495e;
+	position: relative;
+	color: #aab2bd;
+}
+
+.vision-footer a {
+	white-space: nowrap;
+}
+
+.vision-footer, .links-footer {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.links-footer, .vision-footer, .foot address {
+	color: #aab2bd;
+}
+
+.foot address strong {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.logo-footer {
+	margin-bottom: 20px;
+}
+
+.address-footer {
+	margin-bottom: 20px;
+}
+
+.address-footer a {
+	white-space: nowrap
+}
+
+.foot .container {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.footer-thirdparty {
+	margin-top: 10px;
+}
+
+.footer-thirdparty a, .site-version a {
+	color: #aab2bd;
+	border-bottom: 1px dashed;
+}
+
+.footer-thirdparty a:hover, .site-version a:hover {
+	text-decoration: none;
+}
+
+.footer-thirdparty a:hover, .site-version a:hover {
+	color: #50c1e9;
+}
+
+.scroll-help {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2px;
+	margin-right: 10px;
+}
+
+.site-version {
+	font-family: monospace;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 2px;
+	margin-right: 1px;
+}
+
+.stat {
+	padding-top: 76px;
+}
+
+
+
+/******************/
+.pac-container{
+	z-index:2000;
+	padding: 3px 4px;
+  margin-top: 9px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pac-item-selected{
+	border-radius: 4px;
+}
+
+.pac-item:hover{
+	background-color:#1abc9c;
+	border-radius: 4px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

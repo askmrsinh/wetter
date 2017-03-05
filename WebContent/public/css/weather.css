@@ -1,0 +1,60 @@
+body {
+	padding-top: 40px;
+}
+
+canvas {
+	display: block;
+	margin-right: 10px;
+	float: left;
+	padding-top: 5px;
+	margin-bottom: 10px;
+}
+
+.no-padding {
+	padding: 0px !important;
+}
+
+.no-margin {
+	margin: 0px !important;
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+.ml-15 {
+	margin-left: 15px;
+}
+
+.pt-10 {
+	padding-top: 10px;
+}
+
+.fs20 {
+	font-size: 20px;
+}
+
+.wx-box {
+	background-color: #4e5d6c;
+	padding: 5px;
+	/*margin: 5px 10px 0 0;*/
+}
+
+.hourly-box {
+	padding: 7px 15px 7px 15px !important;
+}
+
+.temp {
+	font-weight: bold;
+	font-size: 35px;
+	display: inline;
+	color: #df691a;
+}
+
+.inline {
+	display: inline !important;
+}
+
+.inline-block {
+	display: inline-block !important;
+}
