@@ -34,7 +34,7 @@ We intend to develop a web application which will provide information regarding 
   
 
 ### Home page, showing available map layers in dropdown
-![assets/index_autocomplete.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/index_autocomplete.png)  
+![assets/index_autocomplete.png](https://gitlab.com/user501254/Wetter/raw/b80b165a57036319d80d3e59919c3fa1a4719eb7/assets/index_maps.png)  
   
 
 ### Map page, showing various weather layer overlays (temprature, cloud, wind)
