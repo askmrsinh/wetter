@@ -125,11 +125,11 @@
           windGust: weatherItem.wind.gust,
           cod: weatherItem.cod,
           icon: "http://openweathermap.org/img/w/" + weatherItem.weather[0].icon + ".png",
-          coordinates: [weatherItem.coord.lon, weatherItem.coord.lat]
+          coordinates: [weatherItem.coord.Lon, weatherItem.coord.Lat]
         },
         geometry: {
           type: "Point",
-          coordinates: [weatherItem.coord.lon, weatherItem.coord.lat]
+          coordinates: [weatherItem.coord.Lon, weatherItem.coord.Lat]
         }
       };
       // Set the custom marker icon
@@ -141,6 +141,9 @@
           }
         };
       });
+
+      //console.log(weatherItem);
+      //console.log(feature);
 
       // returns object
       return feature;
