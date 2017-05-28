@@ -17,6 +17,9 @@
 <%
     String uri = request.getRequestURI();
     String pageName = uri.substring(uri.lastIndexOf("/") + 1);
+
+	if (pageName.equalsIgnoreCase("oops.jsp"))
+		out.print("<meta http-equiv=\"refresh\" content=\"3;url=index.jsp\" />");
   %>
 
 <title>Wetter - <%= pageName%></title>
