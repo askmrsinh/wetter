@@ -9,6 +9,8 @@
 	 String pageName = uri.substring(uri.lastIndexOf("/") + 1);
 	 if (pageName.equalsIgnoreCase("map.jsp"))
 	 	pageName = uri.substring(uri.lastIndexOf("/") + 1) + "?layer=" + request.getParameter("layer");
+	 if (pageName.equalsIgnoreCase("news.jsp"))
+		 	pageName = uri.substring(uri.lastIndexOf("/") + 1) + "?type=" + request.getParameter("type");
 	 System.out.println(pageName);
 %>
 
@@ -100,36 +102,38 @@
 							class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/disaster.jsp' ? ' active' : ''}"><a
-								href="disaster.jsp">Disaster Alerts</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Disaster_Alerts")) out.print("active");%>"><a
+								href="news.jsp?type=Disaster_Alerts">Disaster Alerts</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Top</li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/EnviromentalNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="EnviromentalNewsDisplay.jsp">Enviroment News</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Environment")) out.print("active");%>"><a
+								href="news.jsp?type=Environment">Environment</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Earth Climate</li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/EntertainmentNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="EntertainmentNewsDisplay.jsp">Entertainment News</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Pollution")) out.print("active");%>"><a
+								href="news.jsp?type=Pollution">Pollution</a></li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/HealthNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="HealthNewsDisplay.jsp">Health News</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Oil_Spills")) out.print("active");%>"><a
+								href="news.jsp?type=Oil_Spills">Oil Spills</a></li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/SolarEnergyNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="SolarEnergyNewsDisplay.jsp">Solar Energy News</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Renewable_Energy")) out.print("active");%>"><a
+								href="news.jsp?type=Renewable_Energy">Renewable Energy</a></li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/LifeNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="LifeNewsDisplay.jsp">Lifestyle News</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Recycling_And_Waste")) out.print("active");%>"><a
+								href="news.jsp?type=Recycling_And_Waste">Recycling and Waste</a></li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/FuelCellNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="FuelCellNewsDisplay.jsp">Fuel News</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Global_Warming")) out.print("active");%>"><a
+								href="news.jsp?type=Global_Warming">Global Warming</a></li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/FossilFuelNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="FossilFuelNewsDisplay.jsp">Fossil Fuel News</a></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Ozone_Holes")) out.print("active");%>"><a
+								href="news.jsp?type=Ozone_Holes">Ozone Holes</a></li>
 							<li
-								class="${pageContext.request.requestURI eq '/wetter/GeoThermalNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="GeoThermalNewsDisplay.jsp">Geo Thermal News</a></li>
-							<li
-								class="${pageContext.request.requestURI eq '/wetter/EmissionNewsDisplay.jsp' ? ' active' : ''}"><a
-								href="EmissionNewsDisplay.jsp">Emission News</a></li>
-						</ul></li>
+								class="<%if (pageName.equalsIgnoreCase("news.jsp?type=Air_Quality")) out.print("active");%>"><a
+								href="news.jsp?type=Air_Quality">Air Quality</a></li>
+						</ul>
+					</li>
 					<li><a href="#"><i class="fa fa-clock-o"></i> <% out.print(dateFormat.format(cal.getTime())); %></a></li>
 					<!-- forecast time -->
 				</ul>
