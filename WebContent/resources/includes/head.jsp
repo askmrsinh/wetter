@@ -1,8 +1,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Wetter - Weather forecast aggregation.">
+<meta name="author" content="Ashesh Kumar Singh (user501254@gmail.com)">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180"

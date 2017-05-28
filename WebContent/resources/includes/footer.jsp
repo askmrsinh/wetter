@@ -4,7 +4,7 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 col-md-8">
+			<div class="col-sm-9 col-md-9">
 				<p class="social">
 					<a href="https://www.facebook.com/xxxxxxx"><i
 						class="fa fa-facebook fa-fw fa-2x text-muted"></i></a> <a
@@ -15,24 +15,33 @@
 						href="https://www.youtube.com/channel/UCuOpEnoojQxm1h1iaCv8ojg"><i
 						class="fa fa-youtube fa-fw fa-2x text-muted"></i></a>
 				</p>
-				<p class="vision-footer">
-					TCS Bombay envisages the <strong>'Digital Me challenge 15'</strong> platform to
-					harness the intellectual talent of young India to create environment
-					based API applications for usage across variety of applications
-					such as: agriculture, manufacturing, defense, home, city
-					maintenance and services industries. <a
-						href="http://www1.TCSb.ac.in/CSEYantra/Yantra.htm" target="_blank">Read
-						More<i class="fa fa-fw fa-external-link"></i>
+				<p class="vision-footer text-justify">
+					TCS APPhonics Dev envisages the <strong>'DigiPhonics:
+						Digital Me Challenge 15 (Environment App)'</strong> platform to harness the
+					intellectual talent of young India to create environment based API
+					applications on the occasion of Mahatma Gandhi's birth anniversary
+					on 2 October when India will ratify the Conference of Parties (CoP)
+					protocol on combating climate change. <a
+						href="https://knome.ultimatix.net/communities/7412-apphonics-dev"
+						target="_blank">Read More <i class="fa fa-fw fa-external-link"></i>
 					</a>
 				</p>
 				<div class="links-footer">
 					<a href="contact-us">CONTACT US</a> &#8226; <a href="team">TEAM</a>
 					&#8226; <a href="faq">FAQ</a> &#8226; <a href="press">PRESS</a>
 				</div>
+				<div class="powered-by">
+				<p>
+					Powered by APIs and Data from: 
+					<a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a> · 
+					<a href="https://darksky.net/poweredby/" target="_blank">Dark Sky</a> · 
+					<a href="https://developers.google.com/maps/" target="_blank">Google</a>
+				</p>
+				</div>
 			</div>
-			<div class="col-sm-4 col-md-4">
+			<div class="col-sm-3 col-md-3">
 				<div class="logo-footer">
-					<!--             <img width="160" height="32" src="img/EyantraLogoLarge.png" alt="e-Yantra Logo"> -->
+					<img src="public/favicons/favicon-32x32.png" alt="Wetter Logo">
 				</div>
 				<div class="address-footer">
 					<address>
@@ -40,7 +49,7 @@
 						Bombay, Powai,<br> Mumbai - 400076, Maharashtra.
 					</address>
 					<address>
-						Email us at <a href="mailto:helpdesk@wetter.org">helpdesk@wetterorg</a>
+						Email us at <a href="mailto:user501254@gmail.com">helpdesk@wetter.org</a>
 					</address>
 				</div>
 			</div>

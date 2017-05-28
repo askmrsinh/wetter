@@ -19,7 +19,7 @@ p {
 	font-weight: 700;
 	color: black;
 	text-align: center;
-/* 	text-shadow: 3px 6px 9px; */
+	/* 	text-shadow: 3px 6px 9px; */
 }
 
 /* nav */
@@ -173,26 +173,25 @@ p {
 }
 
 /******************/
-.pac-container{
-	z-index:2000;
+.pac-container {
+	z-index: 2000;
 	padding: 3px 4px;
-  margin-top: 9px;
-  border-radius: 4px;
-  font-size: 14px;
+	margin-top: 9px;
+	border-radius: 4px;
+	font-size: 14px;
 }
 
-.pac-item-selected{
+.pac-item-selected {
 	border-radius: 4px;
 }
 
-.pac-item:hover{
-	background-color:#1abc9c;
+.pac-item:hover {
+	background-color: #1abc9c;
 	border-radius: 4px;
 }
 
 .truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
-

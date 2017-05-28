@@ -103,7 +103,7 @@
 					out.print("<h4 class=\"bg-danger\">Unable to get Geolocation, please verify that you have browser support.</h4>");
 				} else {
 					out.print("<h3 class=\"ml-15 text-info\">" + locCity + ", " + locState);
-					out.print("<small class=\"text-muted\">" + locData + "</small>");
+					out.print("<small class=\"text-muted\"> " + locData + "</small>");
 					out.print("</h3>");
 				}
 			%>
