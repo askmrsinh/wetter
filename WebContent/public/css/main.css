@@ -161,8 +161,7 @@ p {
 	-webkit-animation: zoop 4s 1 ease-in;
 }
 
-@
--webkit-keyframes zoop {
+@-webkit-keyframes zoop {
 	from {
 		-webkit-transform: scale(1);
 	}
