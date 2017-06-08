@@ -32,6 +32,7 @@
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+			return null;
 		}
 		return null;
 	}%>
@@ -86,17 +87,19 @@
 				out.print("<p class=\"text-muted\"><i>Source: " + rssURI + "</i></p>");
 
 				NodeList listItem = getNews(rssURI);
+				
+				if (listItem != null) {
 
-				System.out.println("There are " + listItem.getLength() + " items");
-
-				for (int i = 0; i < listItem.getLength(); i++) {
-					Element item = (Element) listItem.item(i);
-
-					String newsTitle = item.getElementsByTagName("title").item(0).getFirstChild().getNodeValue();
-					String newsDescription = item.getElementsByTagName("description").item(0).getFirstChild()
-							.getNodeValue();
-					String newsLink = item.getElementsByTagName("link").item(0).getFirstChild().getNodeValue();
-					String pubDate = item.getElementsByTagName("pubDate").item(0).getFirstChild().getNodeValue();
+					System.out.println("There are " + listItem.getLength() + " items");
+	
+					for (int i = 0; i < listItem.getLength(); i++) {
+						Element item = (Element) listItem.item(i);
+	
+						String newsTitle = item.getElementsByTagName("title").item(0).getFirstChild().getNodeValue();
+						String newsDescription = item.getElementsByTagName("description").item(0).getFirstChild()
+								.getNodeValue();
+						String newsLink = item.getElementsByTagName("link").item(0).getFirstChild().getNodeValue();
+						String pubDate = item.getElementsByTagName("pubDate").item(0).getFirstChild().getNodeValue();
 			%>
 			<div class="list-group">
 				<a href="<%=newsLink%>" target="_blank" class="list-group-item">
@@ -106,8 +109,17 @@
 				</a>
 			</div>
 			<%
-				if (i >= 10)
-						break;
+					if (i >= 10)
+							break;
+					}
+				} else {
+			%>
+			<div class="list-group">
+				<a href=# class="list-group-item">
+					<h6 class="list-group-item-heading truncate-heading">No News Updates</h6>
+				</a>
+			</div>
+			<%
 				}
 				out.print("</div>");
 			%>
