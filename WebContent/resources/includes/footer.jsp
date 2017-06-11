@@ -33,8 +33,8 @@
 				<div class="powered-by">
 				<p>
 					Powered by APIs and Data from: 
-					<a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a> · 
-					<a href="https://darksky.net/poweredby/" target="_blank">Dark Sky</a> · 
+					<a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a> ï¿½ 
+					<a href="https://darksky.net/poweredby/" target="_blank">Dark Sky</a> ï¿½ 
 					<a href="https://developers.google.com/maps/" target="_blank">Google</a>
 				</p>
 				</div>
@@ -72,7 +72,8 @@
 <!-- LOCATION FORM -->
 <form id="loc" name="loc" method="post" action="geo_loc.jsp">
 	<input type='hidden' value='' name='latitude_loc' id='latitude' /> <input
-		type='hidden' value='' name='longitude_loc' id='longitude' />
+		type='hidden' value='' name='longitude_loc' id='longitude' /> <input
+		type='hidden' value='' name='geo-error' id='geo-error' />
 </form>
 
 <script type="text/javascript"

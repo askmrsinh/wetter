@@ -37,7 +37,7 @@
 					<li
 						class="${pageContext.request.requestURI eq '/wetter/geo_loc.jsp' ? ' active' : ''}"><a
 						href="geo_loc.jsp"
-						onclick="document.getElementById('loc').submit(); return false;"><i
+						onclick="getLocation(); document.getElementById('loc').submit(); return false;"><i
 							class="fa fa-location-arrow"></i></a></li>
 					<li
 						class="${pageContext.request.requestURI eq '/wetter/stats.jsp' ? ' active' : ''}"><a

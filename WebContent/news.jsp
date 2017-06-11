@@ -15,7 +15,7 @@
 <html>
 
 <jsp:include page="resources/includes/head.jsp" />
-<body>
+<body onload="getLocation()">
 	<jsp:include page="resources/includes/nav.jsp" />
 	<%!private static NodeList getNews(String url) {
 		try {

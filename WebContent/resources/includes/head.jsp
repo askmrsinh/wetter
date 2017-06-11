@@ -1,28 +1,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Wetter - Weather forecast aggregation.">
+<meta name="description"
+	content="Wetter - Weather forecast aggregation.">
 <meta name="author" content="Ashesh Kumar Singh (user501254@gmail.com)">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180"
 	href="../../public/favicons/apple-touch-icon.png?v=jw6MpKa3ry">
 <link rel="icon" type="image/png"
-	href="../../public/favicons/favicon-32x32.png?v=jw6MpKa3ry" sizes="32x32">
+	href="../../public/favicons/favicon-32x32.png?v=jw6MpKa3ry"
+	sizes="32x32">
 <link rel="icon" type="image/png"
-	href="../../public/favicons/favicon-16x16.png?v=jw6MpKa3ry" sizes="16x16">
-<link rel="shortcut icon" href="../../public/favicons/favicon.ico?v=jw6MpKa3ry" type="image/x-icon" />
-<link rel="shortcut icon" href="favicon.ico?v=jw6MpKa3ry" type="image/x-icon" />
+	href="../../public/favicons/favicon-16x16.png?v=jw6MpKa3ry"
+	sizes="16x16">
+<link rel="shortcut icon"
+	href="../../public/favicons/favicon.ico?v=jw6MpKa3ry"
+	type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico?v=jw6MpKa3ry"
+	type="image/x-icon" />
 
 <%
-    String uri = request.getRequestURI();
-    String pageName = uri.substring(uri.lastIndexOf("/") + 1);
+	String uri = request.getRequestURI();
+	String pageName = uri.substring(uri.lastIndexOf("/") + 1);
 
 	if (pageName.equalsIgnoreCase("oops.jsp"))
 		out.print("<meta http-equiv=\"refresh\" content=\"3;url=index.jsp\" />");
-  %>
+%>
 
-<title>Wetter - <%= pageName%></title>
+<title>Wetter - <%=pageName%></title>
 
 <!-- Modernizr and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -37,6 +43,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+
 #map-canvas {
 	width: 100%;
 	height: 100%;
@@ -79,23 +86,38 @@ html, body {
 <!-- Custom CSS -->
 <link href="public/css/main.css" rel="stylesheet" />
 <link href="public/css/weather.css" rel="stylesheet" />
+<script>
+	var x = document.getElementById("body");
+	var y = document.getElementById("geo-error-msg");
 
-  <script>
-    var x = document.getElementById("body");
-    function getLocation()
-    {
-      if (navigator.geolocation)
-      {
-        navigator.geolocation.getCurrentPosition(bindPosition);
-      }
-      else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-    function bindPosition(position) {
-      $("input[name='latitude_loc']").val(position.coords.latitude);
-      $("input[name='longitude_loc']").val(position.coords.longitude);
-    }
-  </script>
-
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(bindPosition, showError);
+		} else {
+			y.innerHTML = "Geolocation is not supported by this browser.";
+		}
+	}
+	function bindPosition(position) {
+		$("input[name='latitude_loc']").val(position.coords.latitude);
+		$("input[name='longitude_loc']").val(position.coords.longitude);
+		$("input[name='geo-error']").val("FALSE");
+	}
+	function showError(error) {
+		$("input[name='geo-error']").val("TRUE");
+		switch (error.code) {
+		case error.PERMISSION_DENIED:
+			y.innerHTML = "You have denied/ignored the request for Geolocation on this site.";
+			break;
+		case error.POSITION_UNAVAILABLE:
+			y.innerHTML = "Location information is unavailable.";
+			break;
+		case error.TIMEOUT:
+			y.innerHTML = "The request to get user location timed out.";
+			break;
+		case error.UNKNOWN_ERROR:
+			y.innerHTML = "An unknown error occurred.";
+			break;
+		}
+	}
+</script>
 </head>

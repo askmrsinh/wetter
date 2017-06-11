@@ -25,9 +25,11 @@
 
 			<div class="col-md-10">
 				<div class="temp">
-					<% 
+					<%
 						out.print(request.getAttribute("curTemp"));
-						if (session.getAttribute("units").equals("si"))
+						if (session.getAttribute("units").equals("si") 
+								|| session.getAttribute("units").equals("ca")
+								|| session.getAttribute("units").equals("uk2"))
 							out.print("<i class=\"wi wi-celsius\"></i>");
 						else if (session.getAttribute("units").equals("us"))
 							out.print("<i class=\"wi wi-fahrenheit\"></i>");

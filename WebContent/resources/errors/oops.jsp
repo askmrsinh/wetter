@@ -8,7 +8,7 @@
 
 <!-- HEADER -->
 <jsp:include page="../includes/head.jsp" />
-<body>
+<body onload="getLocation()">
 	<jsp:include page="../includes/nav.jsp" />
 	<div class="container error">
 		<div class="row">

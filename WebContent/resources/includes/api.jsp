@@ -1,4 +1,5 @@
-<%@page import="java.io.InputStreamReader, java.io.BufferedReader, java.io.InputStream, java.io.IOException, java.io.Reader, java.text.DecimalFormat, java.net.URL, java.net.URLEncoder, java.nio.charset.Charset, com.eclipsesource.json.*, org.json.*,com.github.dvdme.ForecastIOLib.*"%>
+<%@page
+	import="java.io.InputStreamReader, java.io.BufferedReader, java.io.InputStream, java.io.IOException, java.io.Reader, java.text.DecimalFormat, java.net.URL, java.net.URLEncoder, java.nio.charset.Charset, com.eclipsesource.json.*, org.json.*,com.github.dvdme.ForecastIOLib.*"%>
 
 <%
 	String api_key_GoogleMapsJavaScript = "INSERT_YOUR_KEY";
@@ -37,7 +38,7 @@
 	}
 
 	public static String getJSON(String url) throws IOException, JSONException {
-		System.out.println("\nThe encode url is: " + url);
+		System.out.println("\nThe encoded url is: " + url);
 		JSONObject json = readJsonFromUrl(url);
 		return json.toString();
 	}%>
@@ -60,8 +61,16 @@
 		case "geo_loc.jsp":
 			System.out.println("\ngeo_loc form submitted\n");
 			DecimalFormat df8 = new DecimalFormat(".############");
-			latitude = Double.parseDouble(request.getParameter("latitude_loc"));
-			longitude = Double.parseDouble(request.getParameter("longitude_loc"));
+			if (request.getParameter("latitude_loc") != null
+					&& request.getParameter("latitude_loc").length() > 0
+					&& request.getParameter("longitude_loc") != null
+					&& request.getParameter("longitude_loc").length() > 0) {
+				latitude = Double.parseDouble(request.getParameter("latitude_loc"));
+				longitude = Double.parseDouble(request.getParameter("longitude_loc"));
+			} else {
+				latitude = 0.0d;
+				longitude = 0.0d;
+			}
 			geocode = getJSON("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + df8.format(latitude)
 					+ "," + df8.format(longitude) + "&sensor=false");
 			break;
@@ -106,9 +115,9 @@
 			longitude = results.get(0).asObject().get("geometry").asObject().get("location").asObject()
 					.getDouble("lng", longitude);
 		}
-		
+
 		String request_units = "auto";
-		
+
 		ForecastIO fio = new ForecastIO(api_key_DarkSky);
 		fio.setUnits(request_units);
 		//fio.setHTTPProxy("proxy.tcs.com", 80);
