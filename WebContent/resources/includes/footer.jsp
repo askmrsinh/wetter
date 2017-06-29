@@ -33,8 +33,8 @@
 				<div class="powered-by">
 				<p>
 					Powered by APIs and Data from: 
-					<a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a> � 
-					<a href="https://darksky.net/poweredby/" target="_blank">Dark Sky</a> � 
+					<a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a> &bull; 
+					<a href="https://darksky.net/poweredby/" target="_blank">Dark Sky</a> &bull;
 					<a href="https://developers.google.com/maps/" target="_blank">Google</a>
 				</p>
 				</div>

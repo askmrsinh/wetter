@@ -1,6 +1,5 @@
 <%@page
 	import="java.io.InputStreamReader, java.io.BufferedReader, java.io.InputStream, java.io.IOException, java.io.Reader, java.text.DecimalFormat, java.net.URL, java.net.URLEncoder, java.nio.charset.Charset, com.eclipsesource.json.*, org.json.*,com.github.dvdme.ForecastIOLib.*"%>
-
 <%
 	String api_key_GoogleMapsJavaScript = "INSERT_YOUR_KEY";
 	String api_key_OpenWeatherMap       = "INSERT_YOUR_KEY";
