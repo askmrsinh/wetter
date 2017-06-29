@@ -65,7 +65,7 @@
 		</div>
 	</div>
 	<div class="site-version">
-		<i><a href="#">develop</a></i>
+		<i><a href="https://knome.ultimatix.net/blogposts/320852-digital-me-challenge-15-wetter-weather-forecast-aggregation">develop</a></i>
 	</div>
 </footer>
 
