@@ -3,7 +3,7 @@
 <% 
 	 DateFormat dateFormat = new SimpleDateFormat("hh:mm a | E, MMMM d, YYYY");
 	 Calendar cal = Calendar.getInstance();
-	 System.out.println("\n" + dateFormat.format(cal.getTime()) + "\n");
+	 System.out.println("\n" + dateFormat.format(cal.getTime()));
 	 
 	 String uri = request.getRequestURI();
 	 String pageName = uri.substring(uri.lastIndexOf("/") + 1);
@@ -11,7 +11,7 @@
 	 	pageName = uri.substring(uri.lastIndexOf("/") + 1) + "?layer=" + request.getParameter("layer");
 	 if (pageName.equalsIgnoreCase("news.jsp"))
 		 	pageName = uri.substring(uri.lastIndexOf("/") + 1) + "?type=" + request.getParameter("type");
-	 System.out.println(pageName);
+	 System.out.println(pageName + "\n");
 %>
 
 <header>

@@ -11,6 +11,12 @@
 			api_key_OpenWeatherMap);
 	session.setAttribute("api_key_DarkSky",
 			api_key_DarkSky);
+	
+	System.out.println("\n");
+	System.out.println("================================");
+	System.out.println(session.getCreationTime());
+	System.out.println(session.getId());
+	System.out.println("================================");
 %>
 
 <%!private static String readAll(Reader rd) throws IOException {
@@ -37,7 +43,7 @@
 	}
 
 	public static String getJSON(String url) throws IOException, JSONException {
-		System.out.println("\nThe encoded url is: " + url);
+		System.out.println("\nThe lookup url is:\n  " + url);
 		JSONObject json = readJsonFromUrl(url);
 		return json.toString();
 	}%>
@@ -99,7 +105,7 @@
 		if (status.equalsIgnoreCase("OK")) {
 			JsonArray results = output.get("results").asArray();
 			Data = results.get(0).asObject().getString("formatted_address", "formatted_address_default");
-			System.out.println(Data);
+			System.out.println("\nThe address is:\n  " + Data);
 			request.setAttribute("Data", Data);
 			if (pageName.equalsIgnoreCase("geo_loc.jsp")) {
 				State = results.get(0).asObject().get("address_components").asArray().get(5).asObject()
@@ -121,7 +127,7 @@
 		fio.setUnits(request_units);
 		//fio.setHTTPProxy("proxy.tcs.com", 80);
 
-		System.out.println("\n\n" + fio.getUrl(latitude.toString(), longitude.toString()));
+		System.out.println("\n\nThe forecast request url is:\n  " + fio.getUrl(latitude.toString(), longitude.toString()));
 
 		String curTime, curSummary, curIcon, curPrecipType, curSunRise, curSunSet = "";
 		double curPrecipProb, curTemp, curFeelsLike, curDewPoint, curWindBearing, curTempHigh, curTempLow,
@@ -133,17 +139,27 @@
 				String offset = fio.offset();
 				String units = fio.getFlags().getString("units", "units");
 
+				System.out.println();
+				System.out.println("--------------------");
+				System.out.println("Request Parameters  ");
+				System.out.println("--------------------");
 				System.out.println("latitude: " + fio.getLatitude());
 				System.out.println("longitude: " + fio.getLongitude());
 				System.out.println("timezone: " + timezone);
 				System.out.println("offset: " + offset);
 				System.out.println("units: " + units);
+				System.out.println("--------------------");
+				System.out.println();
 
 				session.setAttribute("units", units);
 
 				// Current Conditions
 				FIOCurrently currently = new FIOCurrently(fio);
 
+				System.out.println();
+                System.out.println("Currently ");
+                System.out.println("----------");
+				
 				curTime = currently.get().time();
 				request.setAttribute("curTime", curTime);
 				System.out.println("curTime :" + curTime);
@@ -207,12 +223,14 @@
 				// Minutely Conditions
 				FIOMinutely minutely = new FIOMinutely(fio);
 				request.setAttribute("minutelyCond", minutely);
+				
+				System.out.println();
+                System.out.println("Minutely  ");
+                System.out.println("----------");
 
 				if (minutely.minutes() < 0) {
-					System.out.println("\n\nNo minutely data.\n");
+					System.out.println("-no minutely data-");
 				} else {
-					System.out.println("\n\nMinutely\n");
-
 					// 			for (int i = 0; i < minutely.minutes(); i++) {
 					// 				String[] m = minutely.getMinute(i).getFieldsArray();
 					// 				System.out.println("Minute #" + (i + 1));
@@ -233,11 +251,13 @@
 				FIOHourly hourly = new FIOHourly(fio);
 				request.setAttribute("hourlyCond", hourly);
 
+				System.out.println();
+                System.out.println("Hourly    ");
+                System.out.println("----------");
+				
 				if (hourly.hours() < 0) {
-					System.out.println("\n\nNo hourly data.\n");
+					System.out.println("-no hourly data-");
 				} else {
-					System.out.println("\n\nHourly\n");
-
 					// 			for (int i = 0; i < hourly.hours(); i++) {
 					// 				String[] h = hourly.getHour(i).getFieldsArray();
 					// 				System.out.println("Hour #" + (i + 1));
@@ -260,12 +280,14 @@
 				// Daily Forecast
 				FIODaily daily = new FIODaily(fio);
 				request.setAttribute("dailyCond", daily);
+				
+				System.out.println();
+                System.out.println("Daily     ");
+                System.out.println("----------");
 
 				if (daily.days() < 0) {
-					System.out.println("\n\nNo daily data.\n");
+					System.out.println("-no daily data-");
 				} else {
-					System.out.println("\n\nDaily\n");
-
 					// 			for (int i = 0; i < daily.days(); i++) {
 					// 				String[] h = daily.getDay(i).getFieldsArray();
 					// 				System.out.println("Day #" + (i + 1));
@@ -284,6 +306,7 @@
 
 					//$dailyCond[]
 				}
+				System.out.println();
 			}
 		} catch (Exception e) {
 			System.err.println("one or more values are missing for this location");
