@@ -18,6 +18,23 @@ p {
 	margin: 0 0 23px 0;
 }
 
+#no-script-error {
+    font-family: monospace;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1031;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 5px 0 5px 0;
+    min-height:53px;
+    border-radius:0px;
+    background-color:#E74C3C;
+    color:#fff;
+}
+
 .brand {
 	font-family: 'Bitter', serif;
 	font-weight: 700;

@@ -15,6 +15,10 @@
 %>
 
 <header>
+	<noscript>
+		<div id="no-script-error" class="alert alert-danger" role="alert">This
+			Site requires JavaScript to be Enabled.</div>
+	</noscript>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -28,7 +32,6 @@
 				<a class="navbar-brand" href="index.jsp">
 					<!-- <img alt="Brand" src="public/favicons/mstile-150x150.png" width="50" height="50"> -->Wetter
         		</a>
-				<a class="navbar-brand " href=""></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
