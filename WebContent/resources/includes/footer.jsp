@@ -76,16 +76,33 @@
 		type='hidden' value='' name='geo-error' id='geo-error' />
 </form>
 
+<!-- jQuery -->
+<!-- <script type="text/javascript"
+	src="public/bower_components/flat-ui/dist/js/vendor/jquery.min.js"></script> -->
 <script type="text/javascript"
-	src="public/bower_components/flat-ui/dist/js/vendor/jquery.min.js"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Flat-UI for Bootstrap JS -->
+<!-- <script type="text/javascript"
+	src="public/bower_components/flat-ui/dist/js/flat-ui.min.js"></script> -->
 <script type="text/javascript"
-	src="public/bower_components/flat-ui/dist/js/flat-ui.min.js"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.min.js"></script>
+
+<!-- Skycons JS -->
+<!-- <script type="text/javascript"
+	src="public/bower_components/skycons-html5/skycons.js"></script> -->
 <script type="text/javascript"
-	src="public/bower_components/skycons-html5/skycons.js"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+
+<!-- Google Maps JS API -->
 <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=<% out.print(session.getAttribute("api_key_GoogleMapsJavaScript")); %>&libraries=places"></script>
+
+<!-- Geocomplete JS -->
+<!-- <script type="text/javascript"
+	src="public/bower_components/geocomplete/jquery.geocomplete.min.js"></script> -->
 <script type="text/javascript"
-	src="public/bower_components/geocomplete/jquery.geocomplete.min.js"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
 
 <script>
   var skycons = new Skycons({"color": "#34495e"}),

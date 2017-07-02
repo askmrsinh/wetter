@@ -1,3 +1,20 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map-canvas {
+	width: 100%;
+	height: 100%;
+}
+
+.gm-style-iw {
+	text-align: center;
+}
+
 body {
 	overflow-x: hidden;
 }
@@ -19,20 +36,20 @@ p {
 }
 
 #no-script-error {
-    font-family: monospace;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1031;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-    padding: 5px 0 5px 0;
-    min-height:53px;
-    border-radius:0px;
-    background-color:#E74C3C;
-    color:#fff;
+	font-family: monospace;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1031;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2rem;
+	padding: 5px 0 5px 0;
+	min-height: 53px;
+	border-radius: 0px;
+	background-color: #E74C3C;
+	color: #fff;
 }
 
 .brand {
@@ -43,7 +60,9 @@ p {
 	/* 	text-shadow: 3px 6px 9px; */
 }
 
+
 /* nav */
+
 .navbar-brand.brand {
 	font-size: 28px !important;
 }
@@ -55,11 +74,9 @@ p {
 
 .navbar-nav>li>a {
 	/*text-shadow: 1px 2px 4px; */
-	
 }
 
-.navbar-collapse .navbar-nav.navbar-right:last-child>.dropdown:last-child>a
-	{
+.navbar-collapse .navbar-nav.navbar-right:last-child>.dropdown:last-child>a {
 	border-radius: 0;
 }
 
@@ -69,7 +86,9 @@ p {
 	color: #bfbfbf;
 }
 
+
 /* footer */
+
 .foot {
 	font-size: 14px;
 	padding: 40px 0;
@@ -82,12 +101,15 @@ p {
 	white-space: nowrap;
 }
 
-.vision-footer, .links-footer {
+.vision-footer,
+.links-footer {
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
 
-.links-footer, .vision-footer, .foot address {
+.links-footer,
+.vision-footer,
+.foot address {
 	color: #aab2bd;
 }
 
@@ -117,16 +139,19 @@ p {
 	margin-top: 10px;
 }
 
-.footer-thirdparty a, .site-version a {
+.footer-thirdparty a,
+.site-version a {
 	color: #aab2bd;
 	border-bottom: 1px dashed;
 }
 
-.footer-thirdparty a:hover, .site-version a:hover {
+.footer-thirdparty a:hover,
+.site-version a:hover {
 	text-decoration: none;
 }
 
-.footer-thirdparty a:hover, .site-version a:hover {
+.footer-thirdparty a:hover,
+.site-version a:hover {
 	color: #50c1e9;
 }
 
@@ -147,7 +172,9 @@ p {
 	margin-right: 1px;
 }
 
-.stat, .news, .error {
+.stat,
+.news,
+.error {
 	padding-top: 76px;
 	padding-bottom: 38px;
 	min-height: 100vh;
@@ -161,7 +188,7 @@ p {
 	text-overflow: ellipsis;
 }
 
-@media ( max-width : 767px) {
+@media ( max-width: 767px) {
 	.truncate-heading {
 		max-height: inherit;
 		white-space: normal;
@@ -182,7 +209,8 @@ p {
 	text-align: center;
 }
 
-.error-logo, .error-redirect>span {
+.error-logo,
+.error-redirect>span {
 	-webkit-animation: zoop 4s 1 ease-in;
 }
 
@@ -190,13 +218,14 @@ p {
 	from {
 		-webkit-transform: scale(1);
 	}
-	
 	to {
 		-webkit-transform: scale(0);
 	}
 }
 
+
 /******************/
+
 .pac-container {
 	z-index: 2000;
 	padding: 3px 4px;
