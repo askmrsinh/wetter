@@ -17,7 +17,7 @@
 
 		<div class="row">
 			<%
-				System.out.print("geo-error" + request.getParameter("geo-error"));
+				System.out.println("geo-error: " + request.getParameter("geo-error"));
 				if (request.getParameter("geo-error") == null) {
 					out.print("<h4 class=\"bg-warning\">Something went wrong, please try agin.</h4>");
 				} else if (request.getParameter("geo-error").length() == 0
