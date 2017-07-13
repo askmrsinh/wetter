@@ -96,7 +96,7 @@
 						<input type="hidden" name="lng" type="text" value=""></input>
 					</div>
 					<button class="btn btn-default" name="lookup" id="find"
-						type="submit" value="find">GO</button>
+						type="submit" value="find" disabled><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"

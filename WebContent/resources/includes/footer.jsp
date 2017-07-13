@@ -124,12 +124,19 @@
   skycons.play();
   
   //GeoCode
-  $(function(){
-    $("#geocomplete").geocomplete({
-      details: "form",
-      types: ['geocode'],
-      //map: "#map-canvas",
-    });
+  $("#geocomplete").geocomplete({
+    details: "form",
+    }).bind("geocode:result keyup", function(event, result) {
+        console.log(event);
+        console.log(result);
+	    if(event.type == "geocode:result"){
+	    	if (result.geometry.location.lat() != '' && result.geometry.location.lng() != '') {
+	            $('#find').attr('disabled', false);
+	        } 
+	    } 
+	    if(event.type == "keyup") {
+	        $('#find').attr('disabled',true);
+	    }
   });
   
   //Tracking
