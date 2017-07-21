@@ -22,8 +22,6 @@ We intend to develop a web application which will provide information regarding 
      ```
 3. Optionally set Proxy ie. `http.proxyHost` && `http.proxyPort` in files:
    - `wetter\WebContent\resources\includes\api.jsp`; line 24
-   - `wetter\WebContent\resources\includes\geo_loc.jsp`; line 27 28
-   - `wetter\WebContent\resources\includes\geo_lookup.jsp`; line 27 28
 
 4. Run the project on Apache Tomcat server.
 
