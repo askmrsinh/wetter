@@ -1,18 +1,5 @@
 {
-	"parserOptions": {
-		"ecmaVersion": 3
-	},
-	"globals": {
-		"window": true,
-		"jQuery": true,
-		"define": true,
-		"module": true,
-		"noGlobal": true
-	},
-	"rules": {
-		"strict": [
-			"error",
-			"function"
-		]
-	}
+	"root": true,
+
+	"extends": "../.eslintrc-browser.json"
 }
