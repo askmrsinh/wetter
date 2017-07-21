@@ -124,19 +124,25 @@
   skycons.play();
   
   //GeoCode
+  var previous_event = "keyup";
   $("#geocomplete").geocomplete({
     details: "form",
     }).bind("geocode:result keyup", function(event, result) {
         console.log(event);
-        console.log(result);
-	    if(event.type == "geocode:result"){
+	    if(event.type == "geocode:result") {
+	    	console.log(result);
 	    	if (result.geometry.location.lat() != '' && result.geometry.location.lng() != '') {
 	            $('#find').attr('disabled', false);
-	        } 
+	        }
 	    } 
 	    if(event.type == "keyup") {
-	        $('#find').attr('disabled',true);
+	    	if (previous_event = "geocode:result" && event.keyCode == 13){
+	    		$('#find').click();
+	    	} else {
+	    		$('#find').attr('disabled',true);
+	    	}
 	    }
+	    previous_event = event.type;
   });
   
   //Tracking
