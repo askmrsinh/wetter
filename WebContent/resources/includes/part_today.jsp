@@ -19,9 +19,7 @@
         tSummary = todayCond.getDay(i).summary();
         tIcon = todayCond.getDay(i).icon();
         tPrecipProb = Math.round((todayCond.getDay(i).precipProbability())*100);
-          if (todayCond.getDay(i).precipType() != null) {
-            tPrecipType = todayCond.getDay(i).precipType();
-          } 
+        tPrecipType = todayCond.getDay(i).precipType();
         tTempHigh = Math.round(todayCond.getDay(i).temperatureMax());
         tTempLow = Math.round(todayCond.getDay(i).temperatureMin());
         tClouds = Math.round((todayCond.getDay(i).cloudCover())*100);
@@ -66,8 +64,8 @@
 			<p>
 				<strong><%= tSummary.substring(1, tSummary.length()-1) %></strong> <br>
 				<% 
-                 if (tPrecipType == null) {
-                	out.print("<i class=\"wi wi-fw wi-umbrella\"></i> " + tPrecipProb + "% "+tPrecipType);
+                 if (!tPrecipType.equalsIgnoreCase("no data")) {
+                	out.print("<i class=\"wi wi-fw wi-umbrella\"></i> " + tPrecipProb + "% "+ tPrecipType.substring(1, tPrecipType.length()-1));
                  } else {
                	 	out.print("<i class=\"wi wi-fw wi-umbrella\"></i> " + tPrecipProb + "% ");
                  }

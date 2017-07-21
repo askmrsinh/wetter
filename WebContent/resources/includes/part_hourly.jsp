@@ -18,9 +18,7 @@
         hSummary = hourlyCond.getHour(hour).summary();
         hIcon = hourlyCond.getHour(hour).icon();
         hPrecipProb = Math.round((hourlyCond.getHour(hour).precipProbability())*100);
-          if (hourlyCond.getHour(hour).precipType()!=null) {
-            hPrecipType = hourlyCond.getHour(hour).precipType();
-          } 
+        hPrecipType = hourlyCond.getHour(hour).precipType();
         hTemp = Math.round(hourlyCond.getHour(hour).temperature());
         hClouds = Math.round(hourlyCond.getHour(hour).cloudCover()*100);
         
@@ -36,7 +34,7 @@
                 // echo '<canvas class="'.$hIcon.'" width="32" height="32"></canvas>';
                 out.print(hSummary.substring(1, hSummary.length()-1));
                 out.print("<br>");
-                  if (hPrecipType != null) {
+                  if (!hPrecipType.equalsIgnoreCase("no data")) {
                 	  out.print("<i class=\"wi wi-fw wi-umbrella\"></i> " + hPrecipProb + "% " + hPrecipType.substring(1, hPrecipType.length()-1));
                   } else {
                 	  out.print("<i class=\"wi wi-fw wi-umbrella\"></i> " + hPrecipProb +"% ");

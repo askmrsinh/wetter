@@ -24,9 +24,7 @@
 	          wSummary = dailyCond.getDay(day).summary();
 	          wIcon = dailyCond.getDay(day).icon();
 	          wPrecipProb = Math.round((dailyCond.getDay(day).precipProbability())*100);
-	          if (dailyCond.getDay(day).precipType() != null) {
-	            wPrecipType = dailyCond.getDay(day).precipType();
-	          } 
+	          wPrecipType = dailyCond.getDay(day).precipType();
 	          wTempHigh = Math.round(dailyCond.getDay(day).temperatureMax());
 	          wTempLow = Math.round(dailyCond.getDay(day).temperatureMin());
 	          wClouds = Math.round((dailyCond.getDay(day).cloudCover())*100);
