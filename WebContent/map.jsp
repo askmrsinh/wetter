@@ -13,34 +13,6 @@
 	<jsp:include page="resources/includes/footer.jsp" />
 	<script>
     var map;
-    
-  <%
-    String mapLayer= request.getParameter("layer");
-	%>
-
-  <% if (mapLayer.equalsIgnoreCase("Clouds")) { %>
-		var layerID = "57f47efe946d8a0100852daa";
-	<% } %>
-	<% if (mapLayer.equalsIgnoreCase("Precipitation")) { %>
-		var layerID = "57f53e96946d8a0100852db7";
-	<% } %>
-	<% if (mapLayer.equalsIgnoreCase("Preassure")) { %>
-		var layerID = "57f53fd9946d8a0100852db8";
-	<% } %>
-	<% if (mapLayer.equalsIgnoreCase("Rain")) { %>
-		var layerID = "57f5404d946d8a0100852db9";
-	<% } %>
-	<% if (mapLayer.equalsIgnoreCase("Snow")) { %>
-		var layerID = "57f54192946d8a0100852dbb";
-	<% } %>
-	<% if (mapLayer.equalsIgnoreCase("Temprature")) { %>
-		var layerID = "57f42591946d8a0100852da7";
-	<% } %>
-	<% if (mapLayer.equalsIgnoreCase("Wind")) { %>
-		var layerID = "57f540c5946d8a0100852dba";
-	<% } %>
-    	
-    
     var myCoordinates = new google.maps.LatLng(19.0356826, 72.9112641);
 
     function initialize() {
@@ -67,9 +39,12 @@
           if (!normalizedCoord) {
             return null;
           }
-          var bound = Math.pow(2, zoom);
-          return "http://maps.owm.io:8099/"+ layerID +"/" +
-            zoom + "/" + normalizedCoord.x + "/" + (bound - normalizedCoord.y - 1) + "?hash=5";
+          //var bound = Math.pow(2, zoom);
+          return "http://tile.openweathermap.org/map/<% out.print(request.getParameter("layer")); %>/" +
+            zoom + "/" + 
+            normalizedCoord.x + "/" + 
+            normalizedCoord.y + 
+            ".png?appid=<% out.print(session.getAttribute("api_key_OpenWeatherMap")); %>"
         },
         tileSize: new google.maps.Size(256, 256),
         maxZoom: 8,

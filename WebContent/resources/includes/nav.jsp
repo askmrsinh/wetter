@@ -56,25 +56,25 @@
 							<li class="dropdown-header">Layers</li>
 							<li
 								class="<%if (pageName.equalsIgnoreCase("map.jsp?layer=Clouds")) out.print("active");%>"><a
-								href="map.jsp?layer=Clouds">Clouds</a></li>
+								href="map.jsp?layer=clouds_new">Clouds</a></li>
 							<li
 								class="<%if (pageName.equalsIgnoreCase("map.jsp?layer=Precipitation")) out.print("active");%>"><a
-								href="map.jsp?layer=Precipitation">Precipitation</a></li>
+								href="map.jsp?layer=precipitation_new">Precipitation</a></li>
 							<li
 								class="<%if (pageName.equalsIgnoreCase("map.jsp?layer=Preassure")) out.print("active");%>"><a
-								href="map.jsp?layer=Preassure">Preassure</a></li>
+								href="map.jsp?layer=pressure_new">Preassure</a></li>
 							<li
 								class="<%if (pageName.equalsIgnoreCase("map.jsp?layer=Rain")) out.print("active");%>"><a
-								href="map.jsp?layer=Rain">Rain</a></li>
+								href="map.jsp?layer=rain_new">Rain</a></li>
 							<li
 								class="<%if (pageName.equalsIgnoreCase("map.jsp?layer=Snow")) out.print("active");%>"><a
-								href="map.jsp?layer=Snow">Snow</a></li>
+								href="map.jsp?layer=snow_new">Snow</a></li>
 							<li
 								class="<%if (pageName.equalsIgnoreCase("map.jsp?layer=Temprature")) out.print("active");%>"><a
-								href="map.jsp?layer=Temprature">Temprature</a></li>
+								href="map.jsp?layer=temp_new">Temprature</a></li>
 							<li
 								class="<%if (pageName.equalsIgnoreCase("map.jsp?layer=Wind")) out.print("active");%>"><a
-								href="map.jsp?layer=Wind">Wind</a></li>
+								href="map.jsp?layer=wind_new">Wind</a></li>
 						</ul></li>
 				</ul>
 				<form class="navbar-form navbar-left" method="post"
