@@ -101,7 +101,7 @@
 						String newsLink = item.getElementsByTagName("link").item(0).getFirstChild().getNodeValue();
 						String pubDate = item.getElementsByTagName("pubDate").item(0).getFirstChild().getNodeValue();
 			%>
-			<div class="list-group">
+			<div class="list-group" title="<%=newsTitle%>">
 				<a href="<%=newsLink%>" target="_blank" class="list-group-item">
 					<h6 class="list-group-item-heading truncate-heading"><%=newsTitle%></h6>
 					<p class="small"><%=pubDate%></p>
