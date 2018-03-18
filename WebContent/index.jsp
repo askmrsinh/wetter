@@ -84,7 +84,7 @@
     // Make the weather request
     var getWeather = function (northLat, eastLng, southLat, westLng) {
       gettingData = true;
-      var requestString = "http://api.openweathermap.org/data/2.5/box/city?bbox=" + westLng + "," + northLat + "," //left top
+      var requestString = "https://api.openweathermap.org/data/2.5/box/city?bbox=" + westLng + "," + northLat + "," //left top
         + eastLng + "," + southLat + "," //right bottom
         + map.getZoom() + "&cluster=yes&format=json" + "&units=metric&APPID=" + openWeatherMapKey;
       request = new XMLHttpRequest();
@@ -124,7 +124,7 @@
           windDegrees: weatherItem.wind.deg,
           windGust: weatherItem.wind.gust,
           cod: weatherItem.cod,
-          icon: "http://openweathermap.org/img/w/" + weatherItem.weather[0].icon + ".png",
+          icon: "https://openweathermap.org/img/w/" + weatherItem.weather[0].icon + ".png",
           coordinates: [weatherItem.coord.Lon, weatherItem.coord.Lat]
         },
         geometry: {

@@ -40,7 +40,7 @@
             return null;
           }
           //var bound = Math.pow(2, zoom);
-          return "http://tile.openweathermap.org/map/<% out.print(request.getParameter("layer")); %>/" +
+          return "https://tile.openweathermap.org/map/<% out.print(request.getParameter("layer")); %>/" +
             zoom + "/" + 
             normalizedCoord.x + "/" + 
             normalizedCoord.y + 
