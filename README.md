@@ -97,12 +97,14 @@ Highcharts JS is a JavaScript charting library based on SVG, with fallbacks to V
 - Brand logo _gnome-weather.png_ from "[Paper Icons](http://snwh.org/paper/icons)" by [Sam Hewitt](http://samuelhewitt.com/) is licensed under [CC-SA-4.0](http://creativecommons.org/licenses/by-sa/4.0/)  
 
 ### TO-DO
-- [ ] Improve News Feeds UI
+- [x] Improve News Feeds UI
 - [ ] Add comparisons across different Weather forecast APIs (eg. OpenWeatherMap vs. Dark Sky)
 - [ ] Add Sign-Up page for easy setting of API keys
-- [ ] Add detailed Error pages
+- [x] Add detailed Error pages
+- [ ] Get rid of the [blatant use of scriptlets](https://stackoverflow.com/a/3180202/2534513)
+- [ ] Migrate away from Cloud9 to always-on platforms
 
-***
+___
 
 **_NOTE:_**  
 1. **_The page `map.jsp` makes GET requests to API services on port 8099. Make sure it's not blocked, else you won't be seeing any results._**  
