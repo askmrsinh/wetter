@@ -102,6 +102,8 @@ Highcharts JS is a JavaScript charting library based on SVG, with fallbacks to V
 - [ ] Add Sign-Up page for easy setting of API keys
 - [x] Add detailed Error pages
 - [ ] Get rid of the [blatant use of scriptlets](https://stackoverflow.com/a/3180202/2534513)
+- [ ] Use maven for build automation
+- [ ] Setup test coverage
 - [ ] Migrate away from Cloud9 to always-on platforms
 
 ___
