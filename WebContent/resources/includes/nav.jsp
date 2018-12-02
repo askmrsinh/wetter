@@ -1,7 +1,7 @@
 <%@page import="java.util.*"%>
 <%@page import="java.text.*"%>
 <% 
-	 DateFormat dateFormat = new SimpleDateFormat("hh:mm a | E, MMMM d, YYYY");
+	 DateFormat dateFormat = new SimpleDateFormat("  MM/d/YY, hh:mm a");
 	 Calendar cal = Calendar.getInstance();
 	 System.out.println("\n" + dateFormat.format(cal.getTime()));
 	 
@@ -20,7 +20,7 @@
 			Site requires JavaScript to be Enabled.</div>
 	</noscript>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
+		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
@@ -29,7 +29,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp">
+				<a class="navbar-brand brand" href="index.jsp">
 					<!-- <img alt="Brand" src="public/favicons/mstile-150x150.png" width="50" height="50"> -->Wetter
         		</a>
 			</div>
@@ -99,6 +99,10 @@
 						type="submit" value="find" disabled><i class="fa fa-search" aria-hidden="true"></i></button>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
+				    <li>
+				        <iframe src="https://ghbtns.com/github-btn.html?user=user501254&repo=Wetter&type=star&count=true&size=large" frameborder="0" scrolling="0" width="150px" height="30px" style="margin-top: 15px;padding-left: 21px;"></iframe>
+				        <iframe src="https://ghbtns.com/github-btn.html?user=user501254&repo=Wetter&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="150px" height="30px" style="margin-top: 15px;padding-left: 21px;"></iframe>
+				    </li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-expanded="false"><i
 							class="glyphicon glyphicon-file"></i> News Feeds<span

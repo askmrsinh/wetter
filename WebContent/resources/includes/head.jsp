@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
 	content="Wetter - Weather forecast aggregation.">
-<meta name="author" content="Ashesh Kumar Singh (user501254@gmail.com)">
+<meta name="author" content="Ashesh Kumar Singh (ashesh.app@outlook.com)">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180"
