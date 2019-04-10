@@ -63,6 +63,7 @@ We intend to develop a web application which will provide information regarding 
 2. [Weather API- OpenWeatherMap](https://openweathermap.org/api)
 3. [Dark Sky API](https://darksky.net/dev/)
 
+
 **Java Libraries:**
 
 - [JSON in Java [package org.json]](https://github.com/stleary/JSON-java)  
@@ -70,7 +71,9 @@ A Java library for Parsing JSON. Used at multiple places within the project.
 - [ForecastIO-Lib-Java](https://github.com/dvdme/forecastio-lib-java)  
 A Java library for the darksky.net API (previously forecast.io). Uses *[minimal-json](https://github.com/ralfstx/minimal-json)* for parsing the Json API response.
 
+
 **Other:**
+
 - [Flat-UI](https://github.com/designmodo/Flat-UI/)  
 Design Framework (html/css3/less/js). Flat UI is based on Bootstrap, a comfortable, responsive, and functional framework that simplifies the development of websites.
 
@@ -95,6 +98,7 @@ An advanced jQuery plugin that wraps the Google Maps API's Geocoding and Places 
 Highcharts JS is a JavaScript charting library based on SVG, with fallbacks to VML and canvas for old browsers.
 
 - Brand logo _gnome-weather.png_ from "[Paper Icons](http://snwh.org/paper/icons)" by [Sam Hewitt](http://samuelhewitt.com/) is licensed under [CC-SA-4.0](http://creativecommons.org/licenses/by-sa/4.0/)  
+
 
 ### TO-DO
 - [x] Improve News Feeds UI
