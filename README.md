@@ -14,7 +14,6 @@ We intend to develop a web application which will provide information regarding 
       - Weather API- OpenWeatherMap key [here](https://home.openweathermap.org/users/sign_up)
       - Dark Sky API key [here](https://darksky.net/dev/register)
    - Set the above keys in `wetter\WebContent\resources\includes\api.jsp` file; lines 4,5,6.
-     
      ```Java
      String api_key_GoogleMapsJavaScript   = "INSERT_YOUR_KEY";
      String api_key_OpenWeatherMap         = "INSERT_YOUR_KEY";
@@ -22,7 +21,6 @@ We intend to develop a web application which will provide information regarding 
      ```
 3. Optionally set Proxy ie. `http.proxyHost` && `http.proxyPort` in files:
    - `wetter\WebContent\resources\includes\api.jsp`; line 24
-
 4. Run the project on Apache Tomcat server.
 
 ## Screens
