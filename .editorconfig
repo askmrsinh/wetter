@@ -1,0 +1,33 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = tab
+insert_final_newline = false
+max_line_length = 120
+tab_width = 4
+
+[*.conf]
+indent_size = 2
+indent_style = space
+tab_width = 2
+
+[*.css]
+indent_style = space
+
+[*.java]
+indent_style = space
+
+[{*.cjs,*.js}]
+indent_style = space
+
+[{*.html,*.sht,*.htm,*.shtm,*.shtml,*.ng}]
+indent_style = space
+
+[{*.jhm,*.xjb,*.rng,*.qrc,*.wsdl,*.fxml,*.plan,*.bpmn,*.pom,*.wsdd,*.xslt,*.jrxml,*.ant,*.xul,*.xsl,*.xsd,*.tld,*.jnlp,*.wadl,*.xml}]
+indent_style = space
+
+[{*.xjsp,*.tag,*.jsf,*.jsp,*.jspf,*.tagf}]
+indent_style = space
