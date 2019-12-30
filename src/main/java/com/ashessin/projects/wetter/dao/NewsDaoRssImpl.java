@@ -26,24 +26,26 @@ public class NewsDaoRssImpl implements NewsDao {
     private static final String PUB_DATE = "pubDate";
 
     private static final String[] SCIENCE_DAILY = {
-            "top/environment",
-            "earth_climate/pollution",
-            "earth_climate/oil_spills",
-            "earth_climate/renewable_energy",
-            "earth_climate/recycling_and_waste",
-            "earth_climate/global_warming",
-            "earth_climate/ozone_holes",
-            "earth_climate/air_quality"
+        "top/environment",
+        "earth_climate/pollution",
+        "earth_climate/oil_spills",
+        "earth_climate/renewable_energy",
+        "earth_climate/recycling_and_waste",
+        "earth_climate/global_warming",
+        "earth_climate/ozone_holes",
+        "earth_climate/air_quality"
     };
 
     private SimpleDateFormat rfc822DateFormat = new SimpleDateFormat(
-            "E, d MMM yyyy HH:mm:ss Z", Locale.US);
+        "E, d MMM yyyy HH:mm:ss Z", Locale.US);
 
 
     /**
      * @param type
      * @param count
+     *
      * @return
+     *
      * @throws NewsDaoException
      */
     @Override
@@ -92,11 +94,12 @@ public class NewsDaoRssImpl implements NewsDao {
     /**
      * @param element
      * @param name
+     *
      * @return
      */
     private String getText(Element element, String name) {
         return element.getElementsByTagName(name).item(0).getFirstChild()
-                .getNodeValue();
+            .getNodeValue();
     }
 
     /**

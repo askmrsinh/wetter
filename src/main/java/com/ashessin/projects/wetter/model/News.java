@@ -65,11 +65,11 @@ public class News {
     @Override
     public String toString() {
         return "News{" +
-                "type='" + type + '\'' +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", link=" + link +
-                ", pubDate=" + pubDate +
-                '}';
+            "type='" + type + '\'' +
+            ", title='" + title + '\'' +
+            ", description='" + description + '\'' +
+            ", link=" + link +
+            ", pubDate=" + pubDate +
+            '}';
     }
 }

@@ -10,7 +10,9 @@ public interface NewsDao {
     /**
      * @param type
      * @param count
+     *
      * @return
+     *
      * @throws NewsDaoException
      */
     List<News> read(String type, int count) throws NewsDaoException;
