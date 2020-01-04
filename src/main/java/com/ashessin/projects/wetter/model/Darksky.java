@@ -97,3 +97,7 @@ public class Darksky {
             .toString();
     }
 }
+
+// TODO:
+//  Replace JSONObject type fields
+//  Stronger type checking

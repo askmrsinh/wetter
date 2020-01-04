@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Darksky</title>
+    <title>Dark Sky</title>
 </head>
 <body>
 <code>${forecast}</code>

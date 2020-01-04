@@ -9,10 +9,10 @@ import kong.unirest.json.JSONObject;
 
 import java.util.TimeZone;
 
-public class DarkskyImpl implements DarkskyDao {
+public class DarkskyDaoImpl implements DarkskyDao {
 
     private static final String KEY = System.getenv("API_KEY_DARKSKY");
-    private static final String URI_PREFIX = "https://api.darksky.net/forecast/";
+    private static final String URI_PREFIX = "https://api.darksky.net/forecast";
 
     /**
      * @param latitude
@@ -27,10 +27,12 @@ public class DarkskyImpl implements DarkskyDao {
         Darksky forecast = null;
         HttpResponse<JsonNode> response;
         try {
-            response = Unirest.get(URI_PREFIX + "{key}/{latitude},{longitude}")
+            response = Unirest.get(URI_PREFIX + "/{key}/{latitude},{longitude}")
                 .routeParam("key", KEY)
                 .routeParam("latitude", String.valueOf(latitude))
                 .routeParam("longitude", String.valueOf(longitude))
+                .queryString("units", "si")
+                .queryString("exclude", "minutely")
                 .header("Accept-Encoding", "application/gzip")
                 .asJson();
         } catch (UnirestException e) {

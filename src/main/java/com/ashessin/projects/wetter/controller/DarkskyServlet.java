@@ -1,7 +1,7 @@
 package com.ashessin.projects.wetter.controller;
 
 import com.ashessin.projects.wetter.dao.DarkskyDaoException;
-import com.ashessin.projects.wetter.dao.DarkskyImpl;
+import com.ashessin.projects.wetter.dao.DarkskyDaoImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,8 +15,8 @@ public class DarkskyServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        double latitude = 23.0225d;
-        double longitude = 72.5714d;
+        double latitude = 23.03d;
+        double longitude = 72.57d;
 
         if (req.getParameterMap().containsKey("latitude") &&
             req.getParameterMap().containsKey("longitude")) {
@@ -29,8 +29,8 @@ public class DarkskyServlet extends HttpServlet {
         }
 
         try {
-            DarkskyImpl darkskyImpl = new DarkskyImpl();
-            req.setAttribute("forecast", darkskyImpl.read(latitude, longitude));
+            DarkskyDaoImpl darkskyDaoImpl = new DarkskyDaoImpl();
+            req.setAttribute("forecast", darkskyDaoImpl.read(latitude, longitude));
             req.getRequestDispatcher("/darksky.jsp").forward(req, resp);
         } catch (DarkskyDaoException | ServletException | IOException e) {
             e.printStackTrace();
