@@ -1,9 +1,6 @@
 package com.ashessin.projects.wetter;
 
-import com.ashessin.projects.wetter.dao.DarkskyDaoException;
-import com.ashessin.projects.wetter.dao.DarkskyImpl;
-import com.ashessin.projects.wetter.dao.NewsDaoException;
-import com.ashessin.projects.wetter.dao.NewsDaoRssImpl;
+import com.ashessin.projects.wetter.dao.*;
 
 public class Main {
 
@@ -11,15 +8,31 @@ public class Main {
         NewsDaoRssImpl newsDaoRssImpl = new NewsDaoRssImpl();
         try {
             newsDaoRssImpl.read("top/environment", 10)
-                .forEach(s -> System.out.println(s));
+                .forEach(System.out::println);
         } catch (NewsDaoException e) {
             e.printStackTrace();
         }
 
-        DarkskyImpl darkskyImpl = new DarkskyImpl();
+        OweatherDaoImpl oweatherDaoImpl = new OweatherDaoImpl();
         try {
-            System.out.println(darkskyImpl.read(37.8267, -122.4233));
+            oweatherDaoImpl.read(new double[]{12, 32, 15, 37,}, 10)
+                .forEach(System.out::println);
+        } catch (OweatherDaoException e) {
+            e.printStackTrace();
+        }
+
+        DarkskyDaoImpl darkskyDaoImpl = new DarkskyDaoImpl();
+        try {
+            System.out.println(darkskyDaoImpl.read(37.8267, -122.4233));
         } catch (DarkskyDaoException e) {
+            e.printStackTrace();
+        }
+
+        GmapsDaoImpl gmapsDaoImpl = new GmapsDaoImpl();
+        try {
+            System.out.println(gmapsDaoImpl.read(37.8267, -122.4233));
+            System.out.println(gmapsDaoImpl.read("Alcatraz Main Cell House"));
+        } catch (GmapsDaoException e) {
             e.printStackTrace();
         }
     }
